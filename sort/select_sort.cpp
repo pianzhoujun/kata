@@ -58,8 +58,6 @@ void heap_adjust (int data[], int len, int pos)
     if (data == NULL || len <= 1 || pos >= len || pos < 0)
         return ;
 
-    int val = data[pos];
-
     for (int node = pos*2 + 1; node < len; node = 2*node + 1){
         if (node+1 < len && data[node] < data[node+1])
             ++node;
